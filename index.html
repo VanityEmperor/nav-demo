@@ -7,7 +7,10 @@
 </head>
 <body>
 	<header></header>	
-	<main id="zhangsan">
+	<main>
+        <div class="wrapper" id="mainXXXXX">
+
+        </div>
 	</main>
 	<footer></footer>
 	<script>
@@ -32,8 +35,21 @@
                 'z': 'zhihu.com', 
                 'm': 'www.mcdonalds.com.cn'
 		}
-        div1 = document.createElement('div')
-        zhangsan.appendChild(div1)
+        		// 遍历 keys，生成 kbd 标签
+		index = 0
+		while(index < keys['length']){ // 0 1 2
+			divXXXXX = document.createElement('div') 
+			mainXXXXX.appendChild(divXXXXX)
+			row = keys[index]  // 第一个数组  第二个数组  第三个数组
+			index2 = 0
+			while(index2 < row['length']){ // 0~9   0~8   0~6
+				kbdXXXXX = document.createElement('kbd')
+				kbdXXXXX.textContent = row[index2]
+				divXXXXX.appendChild(kbdXXXXX)
+				index2 = index2 + 1
+			}
+			index = index+1
+		}
     </script>
     
 </body>
