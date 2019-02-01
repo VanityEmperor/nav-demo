@@ -45,8 +45,18 @@
 			while(index2 < row['length']){ // 0~9   0~8   0~6
 				kbdXXXXX = document.createElement('kbd')
 				kbdXXXXX.textContent = row[index2]
-				divXXXXX.appendChild(kbdXXXXX)
-				index2 = index2 + 1
+                buttonX = document.createElement('button')
+				buttonX.textContent = '编辑'
+				buttonX.id = row[index2]
+				buttonX.onclick = function(xzkjcnxlkcjlk){
+					// xzkjcnxlkcjlk['target'] 就是用户点击的元素
+					key = xzkjcnxlkcjlk['target']['id'] // q w e r t
+					x = prompt('给我一个网址') // qq.com
+					hash[key] = x  // hash 变更
+				}
+                divXXXXX.appendChild(kbdXXXXX)				
+				kbdXXXXX.appendChild(buttonX)
+                index2 = index2 + 1
 			}
 			index = index+1
 		}
